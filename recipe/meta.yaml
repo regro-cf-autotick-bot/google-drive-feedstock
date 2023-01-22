@@ -1,5 +1,5 @@
 {% set name = "google-drive" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/eduardogr/google-drive-python/archive/v{{ version }}.tar.gz
-  sha256: 45bed1f71ef72bad0e1b7837800b44b394d6278af8551718b0180f059d9405ff
+  sha256: a5b94dbd77d73907af91a5f9b6b4285add1002b99e4dbbfbde55ecbc4dfbe904
 
 build:
   noarch: python
