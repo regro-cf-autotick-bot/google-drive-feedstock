@@ -12,22 +12,24 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - google-drive = googledrive.cli:googledrive
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - dataclasses ==0.6
     - google-api-python-client ==1.8.0
     - google-auth-httplib2 ==0.0.3
     - google-auth-oauthlib ==0.4.1
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - googledrive
 
